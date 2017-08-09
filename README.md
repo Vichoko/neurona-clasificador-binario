@@ -7,3 +7,6 @@ Mediante el método del perceptrón ```train(tasaAprendizaje, inputX, inputY, ex
 Se incluye el test ```testTraining``` que ejecuta un entrenamiento con 1,000,000 iteraciones, y luego se analiza la tasa de aciertos y de desaciertos para comprobar la efectividad del clasificador mediante métricas objetivas.
 
 Aparte se incluyen tests de compuertas logicas implementadas mediante perceptrones, para probar el comportamiento de estas.
+
+## Importar
+Se puede importar el proyecto con Eclipse y ejecutar los test con JUnit 4.0.
