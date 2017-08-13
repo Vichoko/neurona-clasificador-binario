@@ -1,6 +1,6 @@
 package neural;
 
-public class Perceptron {
+public class Neuron {
 	public double getBias() {
 		return bias;
 	}
@@ -13,20 +13,32 @@ public class Perceptron {
 		return wy;
 	}
 
+	
 	double bias;
 	double wx;
 	double wy;
+	double threshold = 0.5;
 	
-	public Perceptron(double bias, double wx, double wy){
+	public Neuron(double bias, double wx, double wy){
 		this.bias = bias;
 		this.wx = wx;
 		this.wy = wy;
 	}
+	
+	public Neuron(double bias, double wx, double wy, double threshold){
+		this(bias, wx, wy);
+		this.threshold = threshold;
+	}
 
+	double sigmoid(double x) {
+		return 1.0/(1+Math.exp(-x));
+	}
+	
+	
 	public int synapsis(double a, double b){
-		if (wx*a+wy*b+bias > 0){
+		double val = sigmoid(wx*a+wy*b+bias);
+		if (val > threshold)
 			return 1;
-		}
 		return 0;
 	}
 	

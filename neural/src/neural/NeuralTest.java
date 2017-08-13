@@ -6,21 +6,21 @@ import org.junit.Before;
 import org.junit.Test;
 public class NeuralTest {
 	
-	Perceptron and(){
-		return new Perceptron(-3, 2, 2);
+	Neuron and(){
+		return new Neuron(-3, 2, 2);
 	}
 	
-	Perceptron nand(){
-		return new Perceptron(3, -2, -2);
+	Neuron nand(){
+		return new Neuron(3, -2, -2);
 	}
 	
-	Perceptron or(){
-		return new Perceptron(0, 1, 1);
+	Neuron or(){
+		return new Neuron(0, 1, 1);
 	}
 	
-	Perceptron pAND;
-	Perceptron pNAND;
-	Perceptron pOR;
+	Neuron pAND;
+	Neuron pNAND;
+	Neuron pOR;
 
 	public int[] sum(int a, int b) throws Exception{
 		int outa = pNAND.synapsis(a, b);
@@ -97,7 +97,7 @@ public class NeuralTest {
 		int initialW = 1;
 		int initialBias = 2;
 		System.out.println("Starting training with initial weight = " + initialW + " and bias = " + initialW);
-		Perceptron p = new Perceptron(initialW,initialW,initialBias);
+		Neuron p = new Neuron(initialW,initialW,initialBias);
 		int desiredOutput;
 		double learnRate = 0.1;
 		int iterations = 10000000;
