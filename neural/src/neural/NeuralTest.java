@@ -157,7 +157,7 @@ public class NeuralTest {
 		double tasaDesaciertos = (falsosPositivos + falsosNegativos)*1.0/casosTotales;
 		System.out.println("Tasa aciertos: " + tasaAciertos + "; tasa desaciertos: " + tasaDesaciertos);
 		assertTrue(tasaAciertos > 0.70);
-		assertTrue(tasaDesaciertos < 0.20*casosTotales);
+		assertTrue(tasaDesaciertos < 0.20);
 	}
 	
 
